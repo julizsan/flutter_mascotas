@@ -1,0 +1,38 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta" : "usuario",
+            "icon" : "accessibility",
+            "texto": "Informacion de Usuarios"
+        },
+        {
+            "ruta" : "centros",
+            "icon" : "business_outlined",
+            "texto": "Centros de Adopcion"
+        },
+        {
+            "ruta" : "ajustes",
+            "icon" : "settings",
+            "texto": "Ajustes"
+        },
+        {
+            "ruta" : "ayuda",
+            "icon" : "add_comment",
+            "texto": "Ayuda y comentarios"
+        },
+        {
+            "ruta" : "acuerdo",
+            "icon" : "beenhere_outlined",
+            "texto": "Acuerdos de Usuario"
+        },
+
+        {
+            "ruta" : "valorar",
+            "icon" : "star_border",
+            "texto": "Valorar"
+        }
+
+
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "icon" : "accessibility",
+            "texto": "nombre"
+        },
+        {
+            "icon" : "business_outlined",
+            "texto": "correo"
+        },
+        {
+            "icon" : "settings",
+            "texto": "edad"
+        },
+        {
+            "icon" : "add_comment",
+            "texto": "sexo"
+        },
+        {
+            "icon" : "beenhere_outlined",
+            "texto": "hobby"
+        }
+
+    ]
+}
