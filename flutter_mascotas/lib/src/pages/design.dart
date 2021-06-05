@@ -14,57 +14,13 @@ class Desing extends StatelessWidget{
           child: GridView.count(
            crossAxisCount: 2,
             children: <Widget> [
-              Padding(
-                padding: EdgeInsets.all(5),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5.0),
-                  topRight: Radius.circular(5.0),
-                  ),
-                  child: Image.asset('assets/perrito.jpg', width: 200, height: 150, fit:BoxFit.fill
-                  ),
-                ),
-                
-              ),
-
-              Padding(
-                padding: EdgeInsets.all(5),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5.0),
-                  topRight: Radius.circular(5.0),
-                  ),
-                  child: Image.asset('assets/cheems.jpg', width: 200, height: 150, fit:BoxFit.fill
-                  ),                
-                ),
-              ),
-  
+              
+              buildPaddingAnimal01(),
+              buildPaddingAnimal02(),  
               TitlePerro1(),
-              TitlePerro2(),   
-
-               Padding(
-                 padding: EdgeInsets.all(5),
-                 child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5.0),
-                  topRight: Radius.circular(5.0),
-                  ),
-                  child: Image.asset('assets/pug.jpg', width: 200, height: 150, fit:BoxFit.fill
-                  ),
-              ),
-               ),
-
-              Padding(
-                padding: EdgeInsets.all(5),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5.0),
-                  topRight: Radius.circular(5.0),
-                  ),
-                  child: Image.asset('assets/tzu.jpg', width: 200, height: 150, fit:BoxFit.fill
-                  ),
-                ),
-              ),
+              TitlePerro2(),
+              buildPaddingAnimal03(),
+              buildPaddingAnimal04(),
               TitlePerro3(),
               TitlePerro4(),
             ],
@@ -83,6 +39,63 @@ class Desing extends StatelessWidget{
          
     );
 
+  }
+
+  Padding buildPaddingAnimal04() {
+    return Padding(
+              padding: EdgeInsets.all(5),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(5.0),
+                topRight: Radius.circular(5.0),
+                ),
+                child: Image.asset('assets/tzu.jpg', width: 200, height: 150, fit:BoxFit.fill
+                ),
+              ),
+    );
+  }
+
+  Padding buildPaddingAnimal03() {
+    return Padding(
+               padding: EdgeInsets.all(5),
+               child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(5.0),
+                topRight: Radius.circular(5.0),
+                ),
+                child: Image.asset('assets/pug.jpg', width: 200, height: 150, fit:BoxFit.fill
+                ),
+            ),
+    );
+  }
+
+  Padding buildPaddingAnimal02() {
+    return Padding(
+              padding: EdgeInsets.all(5),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(5.0),
+                topRight: Radius.circular(5.0),
+                ),
+                child: Image.asset('assets/cheems.jpg', width: 200, height: 150, fit:BoxFit.fill
+                ),                
+              ),
+    );
+  }
+
+  Padding buildPaddingAnimal01() {
+    return Padding(
+              padding: EdgeInsets.all(5),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(5.0),
+                topRight: Radius.circular(5.0),
+                ),
+                child: Image.asset('assets/perrito.jpg', width: 200, height: 150, fit:BoxFit.fill
+                ),
+              ),
+              
+    );
   }
 
 }

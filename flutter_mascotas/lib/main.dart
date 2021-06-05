@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mascotas/src/pages/usuario_page.dart';
 import 'package:flutter_mascotas/src/routes/routes.dart';
+import 'package:flutter_mascotas/src/screens/basic_design.dart';
  
 void main() => runApp(MyApp());
  
@@ -9,17 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      initialRoute: '/',
-      routes:  getApplicationRouters(),
-
-      onGenerateRoute: ( settings ){
-
-        print('Ruta llamada: ${ settings.name}');
-
-        return MaterialPageRoute(
-          builder: ( BuildContext context) => UsuarioPage(),
-          );
+      title: 'Marial',
+      initialRoute: 'basic_design',
+      routes: {
+        'basic_design' : ( BuildContext context ) => BasicDesingScreen(),
+        
       },
     );
   }

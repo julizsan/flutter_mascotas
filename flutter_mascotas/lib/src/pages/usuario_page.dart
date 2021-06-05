@@ -29,14 +29,7 @@ class UsuarioPage extends StatelessWidget{
       );
       lista..add( tempWidget )
             ..add( Divider( ));
-    }
-
-    for (String opt2 in opciones2) {
-      final tempWidget = ListTileTheme(
-      );
-      lista..add( tempWidget )
-            ..add( Divider( ));
-    }
+    }    
     return lista;
   }
 
