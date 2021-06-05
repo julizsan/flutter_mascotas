@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mascotas/src/custom_bottom.dart';
+import 'package:flutter_mascotas/src/pages/login.dart';
 
 
 class PrincipalPets extends StatelessWidget{
@@ -21,8 +21,9 @@ class PrincipalPets extends StatelessWidget{
         alignment: Alignment.center,
         child: GridView.count(
          crossAxisCount: 2,
-          children: <Widget> [
+          children: <Widget> [           
             
+
             buildPaddingAnimal01(),
             buildPaddingAnimal02(),  
             TitlePerro1(),
@@ -93,6 +94,7 @@ class PrincipalPets extends StatelessWidget{
               ),
               
     );
+    
   }
 
 }

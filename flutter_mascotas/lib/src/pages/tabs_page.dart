@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_mascotas/src/custom_bottom.dart';
 import 'package:flutter_mascotas/src/pages/ajustes_page.dart';
+import 'package:flutter_mascotas/src/pages/login.dart';
 import 'package:flutter_mascotas/src/pages/principal_pets.dart';
 import 'package:flutter_mascotas/src/pages/usuario_page.dart';
 import 'package:flutter_mascotas/src/routes/routes.dart';
@@ -15,6 +16,8 @@ class TabsPage extends StatelessWidget{
       body: PageView(    
         //physics: NeverScrollableScrollPhysics(),    
         children: <Widget>[
+          //LoginPage(),
+
           Container(
             child: PrincipalPets(),
           ),

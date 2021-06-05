@@ -5,7 +5,7 @@ class CustoNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {    
     return BottomNavigationBar(
-      
+      onTap: (i) => ('$i'),
       currentIndex: 0,
       selectedItemColor: Colors.pink,
       backgroundColor: Colors.purple,
@@ -32,3 +32,4 @@ class CustoNavigation extends StatelessWidget {
       );
   }
 }
+
