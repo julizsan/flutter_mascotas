@@ -4,12 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mascotas/src/custom_bottom.dart';
 
 
-class Desing extends StatelessWidget{
+class PrincipalPets extends StatelessWidget{
   @override  
   Widget build(BuildContext context) {
      return Scaffold(     
-       body: buildContainer(),
-       bottomNavigationBar: CustoNavigation(), 
+       body: buildContainer(),       
          
     );
 

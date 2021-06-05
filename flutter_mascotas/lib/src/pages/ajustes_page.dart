@@ -27,7 +27,7 @@ class AjustesPage extends StatelessWidget{
         children: <Widget>[
           ListTile(
             title: Text('Actualizar') ,
-            subtitle: Text('Comprobar Actualizaciones'),
+            subtitle: Text('Comprobar Actualizaciones'),            
           ),
           Row(
             children: <Widget>[

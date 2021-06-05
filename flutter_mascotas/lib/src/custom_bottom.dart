@@ -6,7 +6,7 @@ class CustoNavigation extends StatelessWidget {
   Widget build(BuildContext context) {    
     return BottomNavigationBar(
       
-      
+      currentIndex: 0,
       selectedItemColor: Colors.pink,
       backgroundColor: Colors.purple,
       unselectedItemColor: Color.fromRGBO(116, 117, 152, 1),

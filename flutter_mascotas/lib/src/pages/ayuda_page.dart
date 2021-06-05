@@ -10,12 +10,32 @@ class AyudaPage extends StatelessWidget{
         backgroundColor: Colors.orange[900],
         title: Text('Ayuda y comentarios'),
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_location),
-          onPressed: (){
-            Navigator.pop(context);
-          },
+        body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 5.0,),
+        children: <Widget>[
+          _cardInformacion(),
+        ],
         ),
     );
   }
+
+    Widget _cardInformacion() {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: Text('Informacion sobre el Problema') ,
+            subtitle: Text('Mis Animales'),            
+          ),
+          Row(
+            children: <Widget>[
+              Padding(padding: EdgeInsets.symmetric(vertical: 5.0,  horizontal: 33.0)),
+            ],
+          )
+        ],
+      ),        
+    );
+  }
+
+  
 }
