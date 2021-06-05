@@ -1,31 +1,61 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mascotas/src/custom_bottom.dart';
 
 
 class BasicDesingScreen extends StatelessWidget {
 
-final estiloTitle = new TextStyle(fontSize: 30, color: Colors.red[400], fontWeight: FontWeight.bold);
-final estiloTexto = new TextStyle(fontSize: 30, color: Colors.blue[400] );
+final estiloTitle = new TextStyle(fontSize: 25, color: Colors.red[400], fontWeight: FontWeight.bold);
+final estiloTexto = new TextStyle(fontSize: 25, color: Colors.blue[400] );
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [          
-            Image( image: AssetImage('assets/cheems.jpg')),            
-            Title(estiloTitle: estiloTitle, estiloTexto: estiloTexto),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: Text('Cheems fue encontrado en las desoladas calles de Japón como Sakurabashi. El cual, estaba solo, sin commida, este perrito ahora esta siendo tratado por veterinarios y esta listo para ser adoptado.'))
-        ],
-        ),
+    return Scaffold(      
+      body: buildColumn(context),
 
+      
+      
    );
+  }
+
+  Column buildColumn(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+          Image( image: AssetImage('assets/cheems.jpg')),            
+          Title(estiloTitle: estiloTitle, estiloTexto: estiloTexto),
+
+          Container(
+            width: MediaQuery.of(context).size.width*0.9,
+            margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),              
+            child: RichText(
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
+                      text: 'Cheems fue encontrado en las desoladas calles de Japón como Sakurabashi. El cual, estaba solo, sin commida, este perrito ahora esta siendo tratado por veterinarios y esta listo para ser adoptado.',
+                      style: TextStyle(fontSize: 18, fontFamily: 'Karla',color: Colors.black,),                        
+                    ),
+                  ),
+          ),
+          
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              MaterialButton(                        
+                      onPressed: () {},
+                      color: Colors.red[600],
+                      child: Text('Postular',
+                          style: TextStyle(color: Colors.white)
+                      ),
+              ),
+            ],
+          ),
+      ],
+      );
   }
 }
 
+
 class Title extends StatelessWidget {
+  
   const Title({
     Key key,
     @required this.estiloTitle,
@@ -38,7 +68,7 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric( horizontal: 20, vertical: 30),
+      margin: EdgeInsets.symmetric( horizontal: 30, vertical: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -65,10 +95,10 @@ class Title extends StatelessWidget {
             Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(': Cheems' , style: estiloTexto,),
-              Text(': Macho', style: estiloTexto,),
-              Text(': Shiba', style: estiloTexto,),
-              Text(': 3 años', style: estiloTexto,),
+              Text(' : Cheems' , style: estiloTexto,),
+              Text(' : Macho', style: estiloTexto,),
+              Text(' : Shiba', style: estiloTexto,),
+              Text(' : 3 años', style: estiloTexto,),
             ],
           ),        
 
@@ -92,4 +122,6 @@ class Title extends StatelessWidget {
       
     );
   }
+  
 }
+

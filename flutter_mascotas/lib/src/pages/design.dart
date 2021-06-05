@@ -1,44 +1,42 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mascotas/src/custom_bottom.dart';
 
 
 class Desing extends StatelessWidget{
   @override  
   Widget build(BuildContext context) {
      return Scaffold(     
-       body: Container(
-          padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
-          margin: EdgeInsets.all(5),
-          alignment: Alignment.center,
-          child: GridView.count(
-           crossAxisCount: 2,
-            children: <Widget> [
-              
-              buildPaddingAnimal01(),
-              buildPaddingAnimal02(),  
-              TitlePerro1(),
-              TitlePerro2(),
-              buildPaddingAnimal03(),
-              buildPaddingAnimal04(),
-              TitlePerro3(),
-              TitlePerro4(),
-            ],
-            
-           ),
-        
-       ),
-
-       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_location),
-          onPressed: (){
-            Navigator.pop(context);
-            
-          },
-        ),  
+       body: buildContainer(),
+       bottomNavigationBar: CustoNavigation(), 
          
     );
 
+  }
+
+  Container buildContainer() {
+    return Container(
+        padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+        margin: EdgeInsets.all(5),
+        alignment: Alignment.center,
+        child: GridView.count(
+         crossAxisCount: 2,
+          children: <Widget> [
+            
+            buildPaddingAnimal01(),
+            buildPaddingAnimal02(),  
+            TitlePerro1(),
+            TitlePerro2(),
+            buildPaddingAnimal03(),
+            buildPaddingAnimal04(),
+            TitlePerro3(),
+            TitlePerro4(),
+          ],
+          
+         ),
+      
+     );
   }
 
   Padding buildPaddingAnimal04() {
